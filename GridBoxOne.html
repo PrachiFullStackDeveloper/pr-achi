@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* main- container */
+            .main-container{
+                width:700px;
+                height: 450px;
+                background-color: aqua;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr ;
+            }
+            /* first-column*/
+            .first-column{
+                height: 200px;
+                width: 100%;
+                grid-template-columns: 1fr 2fr;
+                background-color: blueviolet;
+                display: grid;
+            }
+            /* left-row */
+            .left-row{
+                grid-template-columns: 1fr;
+                background-color: brown;
+            }
+            /* right-row */
+            .right-row{
+                background-color: cadetblue;
+                grid-template-columns: 1fr 1fr;
+            }
+            /* second-column */
+            .second-column{
+                height:200px;
+                width: 1200px;
+                display: grid;
+                background-color: chartreuse;
+                grid-template-columns: 1fr 1fr  1fr;
+            }
+            /* second-column first-row */
+            .left-container{
+                background-color: green;
+                grid-template-columns:1fr ;
+            }
+            /* second-row*/
+            .middle-container{
+                background-color: crimson;
+                grid-template-columns: 1fr;
+            }
+            /* third-row*/
+            .right-container{
+                background-color: darkgoldenrod;
+                grid-template-columns: 1fr;
+            }
+            /* third-column */
+            .third-column{
+                height: 200px;
+                width: 1200px;
+                display: grid;
+                grid-template-columns:1fr 2fr ;
+            }
+            .first-row{
+                background-color: darkred;
+                grid-template-columns: 1fr;
+            }
+            .second-row{
+                background-color: darkslategrey;
+                grid-template-columns: 1fr;
+            }
+
+
+            
+        </style>
+
+    </head>
+    <body>
+        <!-- main-container -->
+        <div class="main-container">
+            <!-- first-row -->
+            <div class="first-column">
+                <div class="left-row"></div>
+                <div class="right-row"></div>
+            </div>
+            <!-- second-column -->
+            <div class="second-column">
+               <div class="left-container"></div>
+               <div class="middle-container"></div>
+               <div class="right-container"></div>
+            </div>
+            <!-- third-column -->
+            <div class="third-column">
+                <div class="first-row"></div>
+                <div class="second-row"></div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </body>
+</html>
