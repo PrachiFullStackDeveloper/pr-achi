@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        .animate-header {
+            color: brown;
+            animation-name: my-animation;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 3; 
+            text-align: center;
+            
+        }
+        @keyframes my-animation{
+            0%{
+                opacity: 100%;
+                transform: translateY(-400px);
+            }
+            50% {
+                opacity: 25%;
+                color: blue;
+                
+            }
+            100%{
+                opacity: 100%;
+                transform: translateY(+400px);
+        color: green;
+            }
+
+
+        }
+      </style>
+
+    </head>
+    <body>
+        <h1 class="animate-header">Prachi M</h1>
+    </body>
+</html>
