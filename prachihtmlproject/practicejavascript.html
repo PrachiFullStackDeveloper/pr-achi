@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* main-container */
+         .main-container {
+            width: 50vw;
+            height: 50vw;
+            background-color: grey;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        /* display-box */
+        #display {
+            background-color: lightslategray;
+            height: 20%;
+            width: 100%;
+        }
+        /* submit-button */
+
+        .submit {
+            width: 150px;
+            height: 60px;
+            background-color: aquamarine;
+            margin-left: 2%;
+            margin-top: 5%;
+        }
+
+        .calbut {
+            font-size: 20px;
+            height: 44px;
+            background-color: lightblue;
+        }
+
+        .button {
+            display: grid;
+            width: 100%;
+            gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 4px;
+
+        }
+    </style>
+    <script>
+        // function displayFunction(shagunOne, shagunTwo) {
+        //     let collectedValue = add(shagunOne, shagunTwo);
+        //     document.getElementById("display").innerHTML = "total amount of shagun is:" + collectedValue;
+        // }
+        let total = 0
+        let displayString = "";
+
+
+        function numbertyped(passednumber) {
+            displayString = displayString + passednumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+            if (passednumber == 9) {
+                document.getElementById("display").style.backgroundColor = "yellow";
+            }
+            else if (passednumber == 8) {
+                document.getElementById("display").style.backgroundColor = "35374B"
+            }
+            else if (passednumber == 9) {
+                document.getElementById("display").style.backgroundColor = "pink"
+            }
+            else if (passednumber == 7) {
+                document.getElementById("display").style.backgroundColor = "white"
+            }
+            else {
+                document.getElementById("display").style.backgroundColor = "black"
+            }
+        }
+    
+        function add() {
+            total = total + Number(displayString);
+            displayString = "";
+            document.getElementById("display").innerHTML = displaystring;
+        
+        function showresult() {
+            total = total + Number(displayString);
+            displayString = total;
+            document.getElementById("display").innerHTML = displayString;
+        }
+        function backspace() {
+            displayString = displayString.substring(0, displayString.length - 1);
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // function sub() {
+        //     let firstNo = Number(document.getElementById("number-one").value);
+        //     let secondNo = Number(document.getElementById("number-two").value);
+        //     total = total + firstNo - secondNo
+        //     document.getElementById("display").innerHTML = " TOTAL = " + total;
+        // }
+        // function multi() {
+        //     let firstNo = Number(document.getElementById("number-one").value);
+        //     let secondNo = Number(document.getElementById("number-two").value);
+        //     total = total + firstNo * secondNo;
+        //     document.getElementById("display").innerHTML = " TOTAL = " + total;
+        // }
+        // function div() {
+        //     let firstNo = Number(document.getElementById("number-one").value);
+        //     let secondNo = Number(document.getElementById("number-two").value);
+        //     total = total + firstNo / secondNo;
+        //     document.getElementById("display").innerHTML = " TOTAL = " + total;
+        // }
+
+        function clearFunction() {
+            total = 0;
+            document.getElementById("display").innerHTML = ""
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <div class="main-container">
+        <h1 id="display"></h1>
+        <div class="buttons">
+            <button class="calbut" onclick="numbertyped(1)">1</button>
+            <button class="calbut" onclick="numbertyped(2)">2</button>
+            <button class="calbut" onclick="numbertyped(3)">3</button>
+            <button class="calbut" onclick="numbertyped(4)">4</button>
+            <button class="calbut" onclick="numbertyped(5)">5</button>
+            <button class="calbut" onclick="numbertyped(6)">6</button>
+            <button class="calbut" onclick="numbertyped(7)">7</button>
+            <button class="calbut" onclick="numbertyped(8)">8</button>
+            <button class="calbut" onclick="numbertyped(9)">9</button>
+            <button class="calbut" onclick="numbertyped(0)">0</button>
+            <button class="calbut" onclick="showresult()">=</button>
+            <button class="calbut" onclick="backspace()">backspace</button>
+
+
+        </div>
+        <br><br>
+        <button class="submit" onclick="add()">ADD</button>
+        <button class="submit" onclick="sub()">SUB</button>
+        <button class="submit" onclick="multi()">MULTI</button>
+        <button class="submit" onclick="div()">DIV</button>
+        <button class="submit" onclick="clearFunction()">CLEAR</button>
+
+
+    </div>
+</body>
+
+</html>
