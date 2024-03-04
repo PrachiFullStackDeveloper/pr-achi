@@ -1,29 +1,174 @@
 <!DOCTYPE html>
 <html>
 
-<head style="background-color: blueviolet;">
+<head>
+    <title>Home Page</title>
+    <!-- internal style -->
+    <style>
+        /* top */
+        .top-container {
+            background-color: yellow;
+            height: 100px;
+            width: 100%;
+        }
+        .row-one {
+            background-color: #B7C9F2;
+        }
+        .id {
+            float: right;
+        }
+        .row-two {
+            background-color: #535C91;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .row-three {
+            background-color: aquamarine;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .row-four {
+            background-color: darksalmon;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .row-six {
+            background-color: #9BB0C1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 200%;
+        }
+    </style>
 </head>
-
 <body>
-    <h1 style="text-align: center; background-color:#FFE4C9;"> My Project</h1>
-    <h2>
-        <a href="index.html">Form Link</a>
-    </h2>
-    <h2>
-        <a href="table.html">Table Page</a>
-    </h2>
-    <h2>
-        <a href="calender.html">Calender Link</a>
-    </h2>
-    <h2>
-        <a href="block.html">Youtube Page</a>
-    </h2>
-    <h2>
-        <a href="flag.html">Flag Link</a>
-    </h2>
-    <h2>
-        <a href="resume.html"> My Resume</a>
-    </h2>
+    <!-- <!- top container -- -->
+    <div class="top-container">
+        <h1 style="text-align: center; font-size: 50px;">My Html Css Project</h1>
+    </div>
+    <!--first-row -->
+    <div class="row-one">
+        <div class="id">
+
+            <a href="https://github.com/PrachiFullStackDeveloper/pr-achi"><button>
+                    <h3>Git Hub</h3>
+                </button></a>&emsp;
+            <a href="https://www.linkedin.com/in/prachi-mahajan-0428bb2aa"><button>
+                    <h3>LinkedIn</h3>
+                </button></a>&emsp;
+            <a href="https://www.skype.com/en/features/skype-web/"><button>
+                    <h3>Skype</h3>
+                </button></a>&emsp;
+            <a href="https://www.skype.com/en/features/skype-web/"><button>
+                    <h3>Stack Overflow</h3>
+                </button></a>&emsp;
+        </div></br>
+        <img src="https://media.licdn.com/dms/image/D4E22AQFTyo6wL_phLg/feedshare-shrink_800/0/1695324092097?e=2147483647&v=beta&t=zlEVgT2zk1tdAxX_PN6rL0G1mJICXI9j1HPGuUObtSw"
+            height="40%" width="20%;">
+        <li
+            style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-left: 30px; font-size: 30px;">
+            Prachi Mahajan</li>
+        <a style="font-size: 20px; margin-left: 40px;"
+            href="https://www.coursera.org/articles/full-stack-developer">Full Stack Developer</a><br><br>
+        <a href="https://www.w3schools.com/howto/howto_css_about_page.asp">Home</a>; &emsp; &emsp;
+        <a
+            href="https://www.google.com/search?q=about+html+&sca_esv=6df0982588bcee2b&sxsrf=ACQVn08h65M4CiXqT_rNFEQzjxjkcw_0jA%3A1708435969785&ei=AarUZeS8L5jR1e8PhIuH8AE&ved=0ahUKEwikweb4g7qEAxWYaPUHHYTFAR4Q4dUDCBA&uact=5&oq=about+html+&gs_lp=Egxnd3Mtd2l6LXNlcnAiC2Fib3V0IGh0bWwgMgQQIxgnMgoQIxiABBiKBRgnMgsQABiABBiKBRiRAjIFEAAYgAQyBRAAGIAEMgoQABiABBgUGIcCMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEjdMVCXDVjJHnABeACQAQGYAfoCoAG5GqoBBzAuMy44LjO4AQPIAQD4AQHCAgoQABhHGNYEGLADwgIGEAAYFhgeiAYBkAYI&sclient=gws-wiz-serp#vhid=O2LAft90i-2uhM&vssid=l">About</a>&emsp;
+        &emsp;
+        <a href="https://www.linkedin.com/in/prachi-mahajan-0428bb2aa">Contact</a>
+    </div>
+    <!-- 2nd row -->
+    <div class="row-two">
+        <div class="first-column">
+            <h1>Form</h1>
+            <a href="./form.html">
+                <h2>Form Project</h2>
+            </a>
+            </a>
+        </div>
+        <div class="second-column">
+            <h1>Flag</h1><a href="flag.html">
+                <h2>Flag Project</h2>
+            </a>
+        </div>
+
+    </div>
+    <!-- 3rd row  -->
+    <div class="row-three">
+        <div class="third-column">
+            <h1>Table Project</h1>
+            <a href="./table.html">
+                <h2>Table</h2>
+            </a>
+        </div>
+        <div class="fourth-column">
+            <h1>Calender Project</h1>
+            <a href="calender.html">
+                <h2>Calender</h2>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- fourth-row -->
+    <div class="row-four">
+        <div class="fifth-column">
+            <h1>Flex Project</h1>
+            <a href="./flex.html">
+                <h2>Youtube Video Using Flex</h2>
+            </a>
+            <a href="../flexchess.html">
+                <h2>Chess Box Using Flex</h2>
+            </a>
+            <a href="./flexBoxOne.html">
+                <h2>Box One Using Flex</h2>
+            </a>
+            <a href="./FlexBoxTwo.html">
+                <h2>Box Two Using Flex</h2>
+            </a>
+
+        </div>
+        <!-- fifth-row -->
+        <div class="row-five">
+            <div class="sixth-column">
+                <h1>Grid Project</h1>
+                <a href="./gridchess.html">
+                    <h2>Chess Box Using Grid</h2>
+                </a>
+                <a href="./GridBoxOne.html">
+                    <h2>Box One Using Grid</h2>
+                </a>
+                <a href="./gridboxtwo.html">
+                    <h2>Box Two Using Grid</h2>
+                </a>
+            </div>
+        </div>
+            <!-- sixth-row -->
+            <div class="row-six">
+                <div class="seven-column">
+                    <h1>Check Even Odd</h1>
+                    <a href="./evenodd.html">
+                        <h2>Even Odd Number</h2>
+                    </a>
+                    <a href="../resume.html"><h2>Resume</h2></a>
+                </div>
+            </div>
+            <!-- 8-column -->
+            <div class="eight-column"><h1>Calculator Project</h1>
+                <a href="../calculator.html"><h2>Calculator</h2></a>
+                <a href="./practicejavascript.html"><h2>Practice Java Script</h2></a>
+                <a href="./practiceproject.html"><h2>Practice Project</h2></a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
 
 
 
