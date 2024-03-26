@@ -7,43 +7,78 @@
     <style>
         /* top */
         .top-container {
-            background-color: yellow;
+            background-color: darkslategrey;
             height: 100px;
             width: 100%;
         }
+
         .row-one {
             background-color: #B7C9F2;
         }
+
         .id {
             float: right;
         }
+
         .row-two {
             background-color: #535C91;
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
+
         .row-three {
             background-color: aquamarine;
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
+
         .row-four {
             background-color: darksalmon;
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
+
         .row-six {
             background-color: #9BB0C1;
             display: grid;
             grid-template-columns: 1fr 1fr;
             width: 200%;
         }
+
+        .animate-header {
+            text-align: center;
+            font-size: 50px;
+            color: chartreuse;
+            animation-name: my-animation;
+            animation-duration: 3s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 3;
+            text-align: center;
+
+        }
+
+        @keyframes my-animation {
+            0% {
+                opacity: 100%;
+                transform: translateX(-400px);
+                color: #B7C9F2;
+            }
+
+            100% {
+                opacity: 100%;
+                transform: translateX(+400px);
+                color: #B47B84;
+            }
+
+
+        }
     </style>
 </head>
+
 <body>
     <!-- <!- top container -- -->
     <div class="top-container">
-        <h1 style="text-align: center; font-size: 50px;">My Html Css Project</h1>
+        <h1 class="animate-header">My Html Css & js Project</h1>
     </div>
     <!--first-row -->
     <div class="row-one">
@@ -140,26 +175,43 @@
                 </a>
             </div>
         </div>
-            <!-- sixth-row -->
-            <div class="row-six">
-                <div class="seven-column">
-                    <h1>Check Even Odd</h1>
-                    <a href="./evenodd.html">
-                        <h2>Even Odd Number</h2>
-                    </a>
-                    <a href="../resume.html"><h2>Resume</h2></a>
-                </div>
+        <!-- sixth-row -->
+        <div class="row-six">
+            <div class="seven-column">
+                <h1>Check Even Odd</h1>
+                <a href="./evenodd.html">
+                    <h2>Even Odd Number</h2>
+                </a>
+                <a href="../resume.html">
+                    <h2>Resume</h2>
+                </a>
+                <a href="days.html">
+                    <h2>Day Project</h2>
+                </a>
+                <a href="ticket.html">
+                    <h2>Ticket Project</h2>
+                </a>
             </div>
-            <!-- 8-column -->
-            <div class="eight-column"><h1>Calculator Project</h1>
-                <a href="../calculator.html"><h2>Calculator</h2></a>
-                <a href="./practicejavascript.html"><h2>Practice Java Script</h2></a>
-                <a href="./practiceproject.html"><h2>Practice Project</h2></a>
-                <a href="./kbc.html"><h1>KBC</h1></a>
-            </div>
-
-
         </div>
+        <!-- 8-column -->
+        <div class="eight-column">
+            <h1>Calculator Project</h1>
+            <a href="calculator.html">
+                <h2>Calculator</h2>
+            </a>
+            <a href="./practicejavascript.html">
+                <h2>Practice Java Script</h2>
+            </a>
+            <a href="./practiceproject.html">
+                <h2>Practice Project</h2>
+            </a>
+            <a href="kbc.html">
+                <h1>KBC</h1>
+            </a>
+        </div>
+
+
+    </div>
 
     </div>
 
