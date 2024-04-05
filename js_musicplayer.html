@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .main-container{
+                height: 80vh;
+                width: 60vw;
+                background-color:#7F9F80;
+                margin-left: 8%;
+                margin-top: 5%;
+            }
+            .display-box{
+                height: 40vh;
+                width: 60vw;
+                background-color: #344955;
+            }
+            #music{
+                height: 8%;
+                width: 30%;
+                background-color: lightslategrey;
+                font-size: 20px;
+                margin-top: 50px;
+                margin-left:60px;
+            }
+        
+    
+        </style>
+        <script>
+        var x = document.getElementById("");
+
+        function playAudio() {
+          x.play();
+        }
+        
+        function pauseAudio() {
+          x.pause();
+        }
+    </script>
+
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="display-box"></div>
+            <button class="start-music" id="music" onclick="playAudio">START MUSIC</button>
+            <button class="pause-music" id="music" onclick="pauseAudio">PAUSE MUSIC</button>
+            <button class="next-music" id="music" onclick="next()">NEXT</button>
+
+        </div>
+
+    </body>
+</html>

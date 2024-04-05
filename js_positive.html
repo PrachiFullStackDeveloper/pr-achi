@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .main-container{
+                height: 70vh;
+                width: 60vw;
+                background-color: #8C6A5D;
+                margin-left: 10%;
+                margin-top: 3%;
+
+            }
+            #display-box{
+                height: 40%;
+                width: 60vw;
+                background-color: #436850;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: xx-large;
+            }
+            .input-box{
+                height: 10%;
+                width: 50%;
+                margin-left: 25%;
+               
+            }
+            .button{
+                height: 10%;
+                width: 40%;
+                margin-left: 30%;
+                margin-top: 5%;
+                background-color: #436850;
+                color: white;
+                font-size: x-large;
+        
+            }
+        </style>
+         <script>
+            function naturalfunction() {
+                let x = document.getElementById("input").value;
+    
+                let output;
+                if (x > 0) {
+                    output = "NUMBER IS POSITIVE";
+    
+                } 
+                else if (x < 0) {
+                    output = "NUMBER IS NEGATIVE";
+    
+                } 
+                else {
+                    output = "NUMBER IS ZERO";
+                }
+                document.getElementById("display-box").innerHTML = output;
+            }
+    
+            function clearfuntion() {
+                document.getElementById("display-box").innerHTML = "";
+            }
+    
+        </script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="display" id="display-box"></div>
+            <input type="number" class="input-box" id="input" placeholder="Enter a Number">
+            <button class="button" id="click" onclick=" naturalfunction()">CLICK</button>
+        </div>
+    </body>
+</html>

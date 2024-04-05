@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main-container {
+            height: 80vh;
+            width: 70vw;
+            background-color:#B3A398;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+        .display {
+            height: 40vh;
+            width: 70vw;
+            background-color:#739072;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+        .start-button {
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            background-color: grey;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .input {
+            height: 40px;
+            width: 200px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function iterate(){
+            // initialize
+            let inputs = [];
+            // // assign
+            // inputs = [111,222,333,334,546.985,569,874,567,955,222,556,];
+            let index = 0;
+            while (index < inputs.length) {
+                let output = "ARRAY AT" + index + "is" + inputs[index];
+            // output
+            console.log(output);
+            index++;
+        }
+        }
+    </script>
+    <script>
+        function iterate(){
+            let prachi = [];
+        for (let i =0; i< 5; i++) {
+            let enter  = prompt("ENTER A NO:");
+            prachi.push(enter);
+        }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display" id="dayDisplay"></div>
+        <input type="number" class="input" id="input-container" >
+        <button class="start-button" onclick="iterate()">START</button>
+    </div>
+</body>
+</html>

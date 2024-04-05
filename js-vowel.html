@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            background-image: url(https://i.ytimg.com/vi/YU6G6h-wV04/maxresdefault.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .display {
+            height: 30%;
+            width: 80%;
+            background-color: #496989;
+            background-image: url(https://media.istockphoto.com/id/640181236/photo/swot-analysis-sign-in-sticky-notes-with-green-background.jpg?s=612x612&w=0&k=20&c=sxgP6EYQQbbHKG2gQC8DZ_Quqlf_SBNtyKLEP75Scko=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 7%;
+            border-radius: 40px;
+            text-align: center;
+            font-size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .input-box {
+            height: 8%;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 10%;
+            border-radius: 20px;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        .CLICK {
+            height: 8%;
+            width: 40%;
+            margin-top: 5%;
+            margin-left: 26%;
+            font-size: xx-large;
+            background-color: #496989;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display" id="display-box"></div>
+        <input class="input-box" type="text" id="input">
+        <button class="CLICK" onclick="vowels()">CLICK</button>
+    </div>
+    <script>
+        function vowels() {
+
+            let x = document.getElementById("input").value;
+            let output = "vowel";
+
+            if (x == "a" || x == "e" || x == "i" || x == "0" || x == "u") {
+                output = "vowel";
+
+            } else{
+                output = "constant"
+            } 
+            document.getElementById("display-box").innerHTML = output;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KBC</title>
+    <style>
+        /* main-container */
+        .main-container {
+            height: 80%;
+            width: 80%;
+        }
+/* start-button */
+        .start-button {
+            background-color: #114232;
+            height: 50px;
+            width: 200px;
+            color: white;
+            font-size: 20px;
+            border-radius: 25px;
+        }
+
+
+        /* display-box */
+        .display {
+            height: 20vh;
+            width: 70%;
+            background-color: #0C359E;
+            display: flex;
+            margin-top: 3%;
+            justify-content: center;
+            border-radius: 50px;
+            margin-left: 5px;
+        }
+
+        #display-text {
+            font-size: 30px;
+            color: white;
+        }
+        /* button */
+
+        button {
+            background-color: #114232;
+            height: 75px;
+            width: 40%;
+            color: white;
+            font-size: 30px;
+            margin-top: 2%;
+            margin-left: 3%;
+            border-radius: 40px;
+
+        }
+    </style>
+    <script>
+        let questionNumber = 0;
+        // question-one
+        function questionOne() {
+            document.getElementById("text-display").innerHTML =
+                " 1) Which methodology is used to performed Maintenance testing?";
+            document.getElementById("answer-one").innerHTML = "A) Breadth test and depth test";
+            document.getElementById("answer-two").innerHTML = "b) Confirmation testing";
+            document.getElementById("answer-three").innerHTML = "c)Retesting";
+            document.getElementById("answer-four").innerHTML = "d)Sanity testing";
+        }
+        // question-two
+        function questionTwo() {
+            document.getElementById("text-display").innerHTML =
+                " 2) Which of the following testing is also known as white-box testing?";
+            document.getElementById("answer-one").innerHTML = "A)Structural testing";
+            document.getElementById("answer-two").innerHTML = "b)Error guessing technique";
+            document.getElementById("answer-three").innerHTML = "c)Design based testing";
+            document.getElementById("answer-four").innerHTML = "d)None of the above";
+        }
+        // question-three
+        function questionThree() {
+            document.getElementById("text-display").innerHTML =
+                " 3) Which of the following is not a valid phase of SDLC";
+            document.getElementById("answer-one").innerHTML = "A)Testing Phase";
+            document.getElementById("answer-two").innerHTML = "b)Requirement Phase ";
+            document.getElementById("answer-three").innerHTML = "c)Deployment phase";
+            document.getElementById("answer-four").innerHTML = "d)Testing closure";
+        }
+        // question-four
+        function questionFour() {
+            document.getElementById("text-display").innerHTML =
+                " 4) Which of the following testing is related to the boundary value analysis?";
+            document.getElementById("answer-one").innerHTML = "A)White box and black box testing";
+            document.getElementById("answer-two").innerHTML = "b)White-box testing ";
+            document.getElementById("answer-three").innerHTML = "c)Black box testing";
+            document.getElementById("answer-four").innerHTML = "d)None of the above";
+        }
+        // question-five
+        function questionFive() {
+            document.getElementById("text-display").innerHTML =
+                "  5) Functional testing is a ------?";
+            document.getElementById("answer-one").innerHTML = "A)Test level";
+            document.getElementById("answer-two").innerHTML = "b)Test design technique";
+            document.getElementById("answer-three").innerHTML = "c)SDLC Model";
+            document.getElementById("answer-four").innerHTML = "d)Test type";
+        }
+        // question-six
+        function questionSix() {
+            document.getElementById("text-display").innerHTML =
+                " 6) What are the different levels of Testing?";
+            document.getElementById("answer-one").innerHTML = "A)Integration testing";
+            document.getElementById("answer-two").innerHTML = "b)Unit testing";
+            document.getElementById("answer-three").innerHTML = "c)System testing";
+            document.getElementById("answer-four").innerHTML = "d)All of the above";
+        }
+        // question-seven
+        function questionSeven() {
+            document.getElementById("text-display").innerHTML =
+                " 7) Sanity testing is a ------? ";
+            document.getElementById("answer-one").innerHTML = "A)Test type";
+            document.getElementById("answer-two").innerHTML = "b)Test Execution Level";
+            document.getElementById("answer-three").innerHTML = "c)Test Level";
+            document.getElementById("answer-four").innerHTML = "d)Test design technique";
+        }
+        // question-eight
+        function questionEight() {
+            document.getElementById("text-display").innerHTML =
+                " 8) What is the key objective of Integration testing? ";
+            document.getElementById("answer-one").innerHTML = "A)Design Errors";
+            document.getElementById("answer-two").innerHTML = "b)Interface Errors";
+            document.getElementById("answer-three").innerHTML = "c)Procedure Errors";
+            document.getElementById("answer-four").innerHTML = "d)None of the mentioned";
+        }
+        // question-nine
+        function questionNine() {
+            document.getElementById("text-display").innerHTML =
+                " 9) Cyclomatic complexity is? ";
+            document.getElementById("answer-one").innerHTML = "A)White-box testing";
+            document.getElementById("answer-two").innerHTML = "b)Black box testing";
+            document.getElementById("answer-three").innerHTML = "c)Grey box testing";
+            document.getElementById("answer-four").innerHTML = "d)All of the above";
+        }
+        // question-ten
+        function questionTen() {
+            document.getElementById("text-display").innerHTML =
+                " 10) Which testing technique is used for usability testing? ";
+            document.getElementById("answer-one").innerHTML = "A)White-box testing";
+            document.getElementById("answer-two").innerHTML = "b)Grey box testing";
+            document.getElementById("answer-three").innerHTML = "c)Black Box testing";
+            document.getElementById("answer-four").innerHTML = "d)Combination of all";
+        }
+        // question-eleven
+        function questionEleven() {
+            document.getElementById("text-display").innerHTML =
+                " 11) Which of the below testing is related to black-box testing?";
+            document.getElementById("answer-one").innerHTML = "A)Boundary value analysis";
+            document.getElementById("answer-two").innerHTML = "b)Code path analysis";
+            document.getElementById("answer-three").innerHTML = "c)Basic path testing";
+            document.getElementById("answer-four").innerHTML = "d)None of the above";
+        }
+        // question-twell
+        function questionTwell() {
+            document.getElementById("text-display").innerHTML =
+               " 12) testing is used to check the code? ";
+            document.getElementById("answer-one").innerHTML = "A)Grey box testing";
+            document.getElementById("answer-two").innerHTML = "b)Black box testing";
+            document.getElementById("answer-three").innerHTML = "c)White-box testing";
+            document.getElementById("answer-four").innerHTML = "d)Red box testing";
+        }
+        // question-thirteen
+        function questionThirteen() {
+            document.getElementById("text-display").innerHTML =
+                " 13)  What is the full form of SRS? ";
+            document.getElementById("answer-one").innerHTML = "A)Software respond system";
+            document.getElementById("answer-two").innerHTML = "b)Software requirements specification";
+            document.getElementById("answer-three").innerHTML = "c)System responds software";
+            document.getElementById("answer-four").innerHTML = "d)System requirements specification";
+        }
+        // question-fourteen
+        function questionFourteen() {
+            document.getElementById("text-display").innerHTML =
+                " 14) ITG stands for------? ";
+            document.getElementById("answer-one").innerHTML = "A)Integration Testing Group";
+            document.getElementById("answer-two").innerHTML = "b)Instantaneous Test Group";
+            document.getElementById("answer-three").innerHTML = "c)Independent Test Group";
+            document.getElementById("answer-four").innerHTML = "d)Individual Testing Group";
+        }
+        // question-fifteen
+        function questionFifteen() {
+            document.getElementById("text-display").innerHTML =
+                " 15) What is component testing? ";
+            document.getElementById("answer-one").innerHTML = "A)White-box testing";
+            document.getElementById("answer-two").innerHTML = "b)Grey box testing";
+            document.getElementById("answer-three").innerHTML = "c)Black box testing";
+            document.getElementById("answer-four").innerHTML = "d)Both a & c";
+        }
+
+        // question
+        function question(question) {
+            document.getElementById("container").style.backgroundColor = "blue";
+
+            if (question == 1) {
+                questionNumber = 1;
+                questionOne();
+            } else if (question == 2) {
+                questionNumber = 2;
+                questionTwo();
+            } else if (question == 3) {
+                questionNumber = 3
+                questionThree();
+            } else if (question == 4) {
+                questionNumber = 4
+                questionFour();
+            } else if (question == 5) {
+                questionNumber = 5;
+                questionFive();
+            } else if (question == 6) {
+                questionNumber = 6;
+                questionSix();
+            } else if (question == 7) {
+                questionNumber = 7;
+                questionSeven();
+            } else if (question == 8) {
+                questionNumber = 8;
+                questionEight();
+            } else if (question == 9) {
+                questionNumber = 9;
+                questionNine();
+            } else if (question == 10) {
+                questionNumber = 10;
+                questionTen();
+            } else if (question == 11) {
+                questionNumber = 11;
+                questionEleven();
+            } else if (question == 12) {
+                questionNumber = 12;
+                questionTwell();
+            } else if (question == 13) {
+                questionNumber = 13;
+                questionThirteen();
+            } else if (question == 14) {
+                questionNumber = 14;
+                questionFourteen();
+            } else if (question == 15) {
+                questionNumber = 15;
+                questionFifteen();
+            }
+            
+        }
+        // correct- ans 
+        function answer(givenAnswer) {
+            if (questionNumber == 1) {
+                if (givenAnswer == 2) {
+                    answerone(true, 2);
+                } else {
+                    answerone(false, 0)
+                }
+            } else if (questionNumber == 2) {
+                if (givenAnswer == 3) {
+                    answerone(true, 3);
+                } else {
+                    answerone(false, 0);
+                }
+
+            } else if (questionNumber == 3) {
+                if (givenAnswer == 3) {
+                    answerone(true, 4);
+                } else {
+                    answerone(false, 0);
+                }
+            } else if (questionNumber == 4) {
+                if (givenAnswer == 3) {
+                    answerone(true, 5);
+                }
+                else {
+                    answerone(false, 0);
+                }
+            } else if (questionNumber == 5) {
+                if (givenAnswer == 4) {
+                    answerone(true, 6);
+                }
+                else {
+                    answerone(false, 0);
+                }
+            } else if (questionNumber == 6) {
+                if (givenAnswer == 4) {
+                    answerone(true, 7);
+                }
+                else {
+                    answerone(false, 0)
+                }
+            } else if (questionNumber == 7) {
+                if (givenAnswer == 2) {
+                    answerone(true, 8);
+                } else {
+                    answerone(false, 0)
+                }
+            }
+            else if (questionNumber == 8) {
+                if (givenAnswer == 2) {
+                    answerone(true, 9);
+                }
+                else {
+                    answerone(false, 0);
+                }
+            } else if (questionNumber == 9) {
+                if (givenAnswer == 1) {
+                    answerone(true, 10);
+                } else {
+                    answerone(false, 0);
+                }
+            } else if (questionNumber == 10){
+                if (givenAnswer == 3) {
+                    answerone (true, 11);
+                } else {
+                    answerone (false, 0)
+                }
+
+            } else if (questionNumber == 11) {
+                if (givenAnswer == 1) {
+                    answerone (true, 12);
+                } else {
+                    answerone (false, 0);
+                }
+            } else if (questionNumber == 12) {
+                if (givenAnswer == 3) {
+                    answerone (true,13);
+                }else {
+                    answerone (false, 0);
+                } 
+            } else if (questionNumber == 13) {
+                if (givenAnswer == 2) {
+                    answerone (true, 14);
+            } else  {
+                answerone (false, 0);
+                }  
+            } else if (questionNumber == 14) {
+                if (givenAnswer == 3) {
+                    answerone (true, 15);
+                } else {
+                    answerone (false, 0);
+                }
+            } else if (questionNumber == 15) {
+                if (givenAnswer = 1) {
+                    answerone (true, 1);
+                } else {
+                    answerone (false,0)
+                }
+            }
+        }
+       
+        // correct or not
+        function answerone(correctAnswer, nextQuestion) {
+            if (correctAnswer) {
+                document.getElementById("text-display").innerHTML =
+                    "Bilkul Sahi Jawab";
+                document.getElementById("container").style.backgroundColor = "grey";
+
+                setTimeout(() => {
+                    question(nextQuestion);
+                }, 3000);
+            } else {
+                document.getElementById("text-display").innerHTML = "GALAT JAWAB";
+                document.getElementById("container").style.backgroundColor = "red";
+
+                setTimeout(() => {
+                    startScreen();
+                }, 2000);
+            }
+        }
+
+        //  hidden do start 
+        function dostart() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            question(1);
+        }
+        function startScreen() {
+            document.getElementById("main-body").hidden = true;
+            document.getElementById("play-button").hidden = false;
+        }
+    </script>
+</head>
+<body
+    style="background-image: url(https://www.koimoi.com/wp-content/new-galleries/2022/07/kbc-director-reveals-format-changes-talks-about-joys-of-working-with-big-b-01.jpg); background-repeat: no-repeat; background-size: cover;">
+    <!-- Start -Button -->
+    <button class="start-button" id="play-button" onclick="dostart()">LET"S START</button>
+    <!-- main -->
+    <div class="main-container" id="main-body" hidden="true">
+        <!-- display-box -->
+        <div class="display" id="container">
+            <h1 id="text-display" class="text-display"></h1>
+        </div>
+        <!-- buttons -->
+        <button class="button" id="answer-one" onclick="answer(1)"></button>
+        <button class="button" id="answer-two" onclick="answer(2)"></button>
+        <button class="button" id="answer-three" onclick="answer(3)"></button>
+        <button class="button" id="answer-four" onclick="answer(4)"></button>
+    </div>
+</body>
+</html>

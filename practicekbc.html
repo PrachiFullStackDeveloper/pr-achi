@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #question-container {
+            margin-top: 50px;
+        }
+
+        #options-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to KBC</h1>
+    <div id="question-container"></div>
+    <div id="options-container"></div>
+
+    <script>
+        const questions = [
+            {
+                question: 'What is the capital of France?',
+                options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
+                correctAnswer: 'Paris'
+            },
+            {
+                question: 'Which planet is known as the Red Planet?',
+                options: ['Mars', 'Venus', 'Jupiter', 'Saturn'],
+                correctAnswer: 'Mars'
+            },
+            // Add more questions as needed
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function displayQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const optionsContainer = document.getElementById('options-container');
+            const currentQuestion = questions[currentQuestionIndex];
+
+            questionContainer.innerHTML = `<p>${currentQuestion.question}</p>`;
+
+            optionsContainer.innerHTML = '';
+            currentQuestion.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.classList.add('option');
+                optionElement.innerText = option;
+                optionElement.addEventListener('click', () => checkAnswer(index));
+                optionsContainer.appendChild(optionElement);
+            });
+        }
+
+        function checkAnswer(selectedIndex) {
+            const currentQuestion = questions[currentQuestionIndex];
+            const selectedOption = currentQuestion.options[selectedIndex];
+
+            if (selectedOption === currentQuestion.correctAnswer) {
+                alert('Correct Answer!');
+
+                // Move to the next question or end the game if no more questions
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    displayQuestion();
+                } else {
+                    alert('Congratulations! You have completed the game.');
+                }
+            } else {
+                alert('Wrong Answer! Game Over.');
+            }
+        }
+
+        // Start the game
+        displayQuestion();
+    </script>
+</body>
+</html>

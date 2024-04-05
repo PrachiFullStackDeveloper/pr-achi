@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            height: 50vw;
+            width: 70vw;
+            background-color: darkslategrey;
+            margin-left: 10%;
+            margin-top: 2%;
+            
+        }
+
+        .display-box {
+            height: 30vh;
+            width: 70vw;
+            background-color: #627254;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .input-box{
+            height: 5%;
+            width: 40%;
+            margin-top: 5%;
+            margin-left: 25%;
+            background-color: dimgray;
+            color: white;
+            
+        }
+
+        .button {
+            height: 10%;
+            width: 50%;
+            background-color: #627254;
+            font-size: 35px;
+            color: white;
+            margin-left: 20%;
+            margin-top: 5%;
+
+        }
+    </style>
+    <script>
+        function EnterButton() {
+            let x = Number(document.getElementById("inputone").value);
+            let y = Number(document.getElementById("inputtwo").value);
+            let z = Number(document.getElementById("inputthree").value);
+            let output;
+
+            if (x > y && x > z) {
+                output = x;
+                document.getElementById("display").innerHTML = "Largest Number" + output;
+
+            } else if (y > z && y > x) {
+                output = y;
+                document.getElementById("display").innerHTML = "Largest Number" + output;
+            } else {
+                output = z;
+                document.getElementById("display").innerHTML = "Largest Number" + output;
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display-box" id="display"></div>
+        <input type="number" id="inputone" class="input-box" placeholder="ENTER a Number">
+        <input type="number" id="inputtwo" class="input-box"placeholder="ENTER a Number">
+        <input type="number" id="inputthree" class="input-box"placeholder="ENTER a Number">
+        <button class="button" id="enter" onclick="EnterButton()">ENTER</button>
+
+    </div>
+</body>
+
+</html>

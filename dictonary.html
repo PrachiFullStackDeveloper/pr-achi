@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            height: 80vh;
+            width: 60vw;
+            background-color: #B0C5A4;
+            margin-left: 12%;
+            margin-top: 5%;
+
+        }
+
+        #result {
+            height: 30vh;
+            width: 60vw;
+            background-color: #50727B;
+            font-size: 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #age {
+            height: 8%;
+            width: 25%;
+            margin-left: 34%;
+            margin-top: 3%;
+            font-size: x-large;
+        }
+
+        .start-button {
+            height: 10%;
+            width: 35%;
+            background-color: #222831;
+            font-size: x-large;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;
+            margin-top: 5%;
+
+        }
+    </style>
+    <script>
+        function dictonary() {
+            let array = [];
+            let i = 0;
+            while (i < 3) {
+                let student = {}
+                student["firstName"] = prompt("enter first name");
+                student["lastName"] = prompt("enter last name");
+                array.push(student)
+                console.log(array[i])
+                i++
+
+
+                let a = 0;
+                while (a > student.length) {
+                    a++;
+                    console.log(firstName + lastName);
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display-box" id="result"></div>
+        <input type="number" id="age" class="input-box">
+        <button class="start-button" id="button" onclick="dictonary()">START</button>
+    </div>
+
+</body>
+
+</html>
