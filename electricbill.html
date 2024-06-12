@@ -3,6 +3,7 @@
 <head>
     <title>Electric bill</title>
     <style>
+        /* main */
         .main-container {
             height: 100vh;
             width: 100vw;
@@ -12,7 +13,7 @@
             justify-content: center;
             align-items: center;
         }
-
+/* display box */
         #display_box {
             height: 15%;
             width: 50%;
@@ -25,7 +26,7 @@
             color: white;
             font-size: 20px;
         }
-
+/* input box */
         .label {
             font-size: 30px;
             color: black;
@@ -62,22 +63,27 @@
 
 <script>
     function calculateBill() {
-        let units = parseFloat(document.getElementById("unit_input").value);
-        let lateFees = parseFloat(document.getElementById("late_fee_input").value);
-        let ratePerUnit = 0.12; // Example rate per kWh
-
-        if (isNaN(units)) {
-            alert("Please enter valid units.");
-            return;
+    let units = 
+    document.getElementById("unit_input").value;
+    let days = 
+    document.getElementById("late_fee_input").value;
+    let bill;
+    if (units < = 50) {
+        bill = units * 1.5
+        document.getElementById("display_box").innerHTML = "THE BILL IS =" + bill;
+        if (days > 10 && days < 20){
+            document.getElementById("display").innerHTML = "THE BILL IS" + bill + 20;
+        } else if (days > 20){
+            document.getElementById("display_box").innerHTML = "the bill is =" + bill + 100;
+        }  else if  (days > 180) {
+            document.getElementById("display_box") .innerHTML = "THE BILL IS =" + bill + "line cut";
         }
+    }
+    else if (units > = 51 && units < = 150)
+    {
+        bill = 
+    }
 
-        if (isNaN(lateFees)) {
-            lateFees = 0; // If late fees are not entered, consider it as 0
-        }
-
-        var billAmount = units * ratePerUnit + lateFees;
-
-        document.getElementById("display_box").innerText = "Bill Amount: " + billAmount.toFixed(2);
     }
 </script>
 </body>

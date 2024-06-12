@@ -13,8 +13,8 @@
             background-color: #1e1f22;
             border-radius: 10px;
             padding: 10px;
-            margin-left:200px ;
-        
+            margin-left: 200px;
+
         }
 
         /* display-box */
@@ -98,6 +98,7 @@
                 document.getElementById("display").style.backgroundColor = "yellow";
             }
         }
+        // function addition
         function add() {
             total = Number(displayString);
             action = 1;
@@ -106,6 +107,7 @@
 
             document.getElementById("display").innerHTML = displayString;
         }
+        // function substraction
         function sub() {
             total = Number(displayString);
             action = 2;
@@ -113,6 +115,7 @@
 
             document.getElementById("display").innerHTML = displayString;
         }
+        // function multiplication
         function multiplication() {
             total = Number(displayString);
             action = 3;
@@ -120,6 +123,7 @@
 
             document.getElementById("display").innerHTML = displayString;
         }
+        // function division
         function div() {
             total = Number(displayString);
             action = 4;
@@ -127,6 +131,7 @@
 
             document.getElementById("display").innerHTML = displayString;
         }
+        // function percentage
         function percentage() {
             total = Number(displayString);
             action = 5;
@@ -134,6 +139,7 @@
 
             document.getElementById("display").innerHTML = displayString;
         }
+        // function showresult
         function showResult() {
 
             if (action == 1) {
@@ -148,17 +154,16 @@
             displayString = total;
             document.getElementById("display").innerHTML = displayString;
         }
-
+        // clear function
         function clearFunction() {
             total = 0;
             displayString = "";
             document.getElementById("display").innerHTML = ""
         }
+        // backspace function
         function Backspace() {
             displayString = displayString.substring(0, displayString.length - 1)
             document.getElementById("display").innerHTML = displayString
-
-
         }
 
     </script>
