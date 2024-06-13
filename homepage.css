@@ -1,0 +1,65 @@
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #C8CFA0;
+}
+
+.row-one {
+    height: 20vh;
+    width: 100vw;
+    background-color: #686D76;
+    
+
+}
+
+.row-two {
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.row-three{
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.row-four{
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.row-five{
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.row-six{
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 
+}
+.row-seven{
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 
+}
+.row-eight{
+    height: 40vh;
+    width: 100vw;
+    background-color: #DBB5B5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 
+}
+
+
