@@ -3,17 +3,20 @@
 
 <head>
     <style>
+        /* main container */
         .main-container {
 
             flex-direction: column;
             display: flex;
-            align-items: end;
+            align-items: center;
             background-color: #8CB9BD;
             height: 600px;
             width: 100%;
             flex-wrap: wrap;
+            margin: 30px;
         }
 
+        /*  */
         .inner-container {
             height: 200px;
             width: 30%;
@@ -38,11 +41,16 @@
 </head>
 
 <body>
-    <div class="main-container"><video src="../prachihtmlproject/sample_video.mp4 (240p).mp4" controls height="600px"></video>
+    <!-- main container 1st column -->
+    <div class="main-container"><video src="../prachihtmlproject/sample_video.mp4 (240p).mp4" controls
+            height="600px"></video>
+        <!-- second column first box -->
         <div class="inner-container first-box"> <video src="../Accets/big_buck_bunny_720p_1mb.mp4" controls
                 height="200px;"></video></div>
+        <!--second column second box -->
         <div class=" inner-container second-box"> <video src="../Accets/big_buck_bunny_720p_20mb.mp4" controls
                 height="200px;"></video></div>
+        <!-- second column third box -->
         <div class="inner-container third-box"> <video src="../Accets/big_buck_bunny_720p_1mb.mp4" controls
                 height="200px;"></video></div>
     </div>

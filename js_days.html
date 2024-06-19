@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
+        /* main */
         .main-container {
             height: 80vh;
             width: 70vw;
-            background-color:#B3A398;
+            background-color: #B3A398;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -13,16 +15,20 @@
             margin-left: 10%;
             margin-top: 5%;
         }
+
+        /* display box */
         .display {
             height: 40vh;
             width: 70vw;
-            background-color:#739072;
+            background-color: #739072;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             color: white;
         }
+
+        /* start button */
         .start-button {
             height: 50px;
             width: 150px;
@@ -31,6 +37,8 @@
             margin-top: 20px;
             cursor: pointer;
         }
+
+        /* input box */
         .input {
             height: 40px;
             width: 200px;
@@ -40,47 +48,62 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- main container -->
     <div class="main-container">
+        <!-- display box -->
         <div class="display" id="dayDisplay"></div>
+        <!-- input box -->
         <input type="number" class="input" id="input-container" placeholder="Enter a number (1-7)">
+        <!-- start button -->
         <button class="start-button" onclick="displayDay()">START</button>
     </div>
 
     <script>
+        // function displayday
         function displayDay() {
             var input = document.getElementById("input-container").value;
             var dayDisplay = document.getElementById("dayDisplay");
             var day;
 
             switch (parseInt(input)) {
+                // day1
                 case 1:
                     day = "Sunday";
                     break;
+                // day 2
                 case 2:
                     day = "Monday";
                     break;
+                // day 3
                 case 3:
                     day = "Tuesday";
                     break;
+                // day 4
                 case 4:
                     day = "Wednesday";
                     break;
+                // day 5
                 case 5:
                     day = "Thursday";
                     break;
+                // day 6
                 case 6:
                     day = "Friday";
                     break;
+                // day 7
                 case 7:
                     day = "Saturday";
                     break;
+
                 default:
-                    day = "Invalid input. Please enter  number between 1 and 7.";
+                    day = "Invalid . Please enter  number between 1 and 7.";
             }
 
             dayDisplay.textContent = day;
         }
     </script>
 </body>
+
 </html>

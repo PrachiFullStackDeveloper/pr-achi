@@ -58,19 +58,20 @@
         <div class="display" id="display-box"></div>
         <input class="input-box" type="text" id="input">
         <button class="CLICK" onclick="vowels()">CLICK</button>
+        
     </div>
     <script>
         function vowels() {
 
             let x = document.getElementById("input").value;
-            let output = "vowel";
+            let output = "vowel"
 
             if (x == "a" || x == "e" || x == "i" || x == "0" || x == "u") {
                 output = "vowel";
 
-            } else{
-                output = "constant"
-            } 
+            } else {
+                output = "THIS IS NOT A VOWEL";
+            }
             document.getElementById("display-box").innerHTML = output;
 
         }

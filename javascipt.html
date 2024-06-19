@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main-container {
+            height: 80vh;
+            width: 70vw;
+            background-color:#B3A398;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+        .display {
+            height: 40vh;
+            width: 70vw;
+            background-color:#739072;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+        .start-button {
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
+            background-color: grey;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .input {
+            height: 40px;
+            width: 200px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display" id="dayDisplay"></div>
+        <input type="number" class="input" id="input-container" placeholder="Enter a number (1-7)">
+        <input type="number" class="input" id="input-box" placeholder="Enter a number (1-7)">
+        <button class="start-button" onclick="displayDay()">START</button>
+    </div>
+
+   <script>
+    // function displayDay(){
+    //     let x =Number( document.getElementById("input-container").value);
+    //     let y = Number (document.getElementById("input-box").value);
+    //     let z =  x + y;
+
+    //           document.getElementById("dayDisplay").innerHTML = z;
+    // }
+    // function displayDay(){
+    //     let x = Number(prompt("enter a value of x"));
+    //     let y = Number(prompt("eneter value of y"));
+    //     let z = (x + y );
+    //     document.getElementById("dayDisplay").innerHTML = z;
+    // }
+    // function displayDay(){
+    //     let x = 12;
+    //     let y = 12;
+    //     let z = x + y;
+    //     document.getElementById("dayDisplay").innerHTML = z;
+    // }
+    function displayDay(){
+        let x =13;
+        let y = 23;
+        let z = x+ y;
+        console.log(z);
+    }
+   </script>
+</body>
+</html>
