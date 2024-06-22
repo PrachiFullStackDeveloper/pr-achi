@@ -21,7 +21,7 @@
             background-image: url(https://media.istockphoto.com/id/640181236/photo/swot-analysis-sign-in-sticky-notes-with-green-background.jpg?s=612x612&w=0&k=20&c=sxgP6EYQQbbHKG2gQC8DZ_Quqlf_SBNtyKLEP75Scko=);
             background-repeat: no-repeat;
             background-size: cover;
-            margin-left: 7%;
+            margin-left: 9%;
             border-radius: 40px;
             text-align: center;
             font-size: 60px;
@@ -58,6 +58,7 @@
         <div class="display" id="display-box"></div>
         <input class="input-box" type="text" id="input">
         <button class="CLICK" onclick="vowels()">CLICK</button>
+        <button class="CLICK" onclick="ClearText()">CLEAR</button>
         
     </div>
     <script>
@@ -74,6 +75,9 @@
             }
             document.getElementById("display-box").innerHTML = output;
 
+        }
+        function ClearText(){
+            document.getElementById("display-box").innerHTML = ""
         }
     </script>
 </body>

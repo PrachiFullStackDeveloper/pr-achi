@@ -29,8 +29,8 @@
         }
 
         /* start button */
-        .start-button {
-            height: 50px;
+        .buttons {
+            height: 40px;
             width: 150px;
             font-size: 20px;
             background-color: grey;
@@ -41,7 +41,7 @@
         /* input box */
         .input {
             height: 40px;
-            width: 200px;
+            width: 250px;
             font-size: 20px;
             margin-bottom: 20px;
             text-align: center;
@@ -57,7 +57,8 @@
         <!-- input box -->
         <input type="number" class="input" id="input-container" placeholder="Enter a number (1-7)">
         <!-- start button -->
-        <button class="start-button" onclick="displayDay()">START</button>
+        <button class="buttons" onclick="displayDay()">START</button>
+        <button class="buttons" onclick="clearday()">CLEAR</button>
     </div>
 
     <script>
@@ -102,6 +103,11 @@
             }
 
             dayDisplay.textContent = day;
+        }
+        // function clear
+        function clearday(){
+            document.getElementById("dayDisplay").innerHTML = ""
+
         }
     </script>
 </body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* main */
+        .main-container {
+            height: 90vh;
+            width: 90vh;
+            background-color: grey;
+            margin-top: 3%;
+            margin-left: 8%;
+        }
+
+        .display {
+            height: 50vh;
+            width: 90vh;
+            background-color: #B0C5A4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .button {
+            height: 40px;
+            width: 250px;
+            margin-left: 140px;
+            margin-top: 50px;
+            background-color: #222831;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        // check eligibility for vote
+
+        //     function displaytext() {
+        //         let age = prompt("ENTER YOUR AGE");
+
+        //         if (age >= 18) {
+        //             document.getElementById("display-box").innerHTML = "ELIGIBLE FOR VOTE";
+        //         } else {
+        //             document.getElementById("display-box").innerHTML = "NOT ELIGIBLE FOR VOTE";
+        //         }
+        //     }
+
+        // 
+        // 
+        function displaytext() {
+
+            let name = prompt("Name");
+            let output = "";
+
+            while (name > 0) {
+                output = output + "Prachi Mahajan<br/>";
+
+                name = name - 1;
+
+                document.getElementById("display-box").innerHTML = output;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main-container">
+        <!-- display -->
+        <div class="display" id="display-box"></div>
+        <div class="input-container"></div>
+        <button class="button" onclick="displaytext()">CHECK </button>
+    </div>
+</body>
+
+</html>

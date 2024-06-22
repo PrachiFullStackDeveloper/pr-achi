@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* main-container */
+        .main-container {
+            height: 100vh;
+            width: 70vw;
+            margin-left: 100px;
+            background-image: url(https://t4.ftcdn.net/jpg/02/57/84/15/360_F_257841551_ijTBIpkhoazelh7UkA68joRds9lNqokP.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 30px;
+
+        }
+
+        .display {
+            height: 45vh;
+            width: 70vw;
+            background-image: url(https://media.istockphoto.com/id/1369176886/vector/bingo-lottery-balls-with-numbers-from-one-to-eight.jpg?s=612x612&w=0&k=20&c=68YDxazykdts1dyJCf2sL5LOHTg8WAy1gV--XpdW57M=);
+
+        }
+
+        .button {
+            height: 70px;
+            width: 270px;
+            background-color: #627254;
+            margin-left: 300px;
+            margin-top: 5%;
+            font-size: xx-large;
+            font-family: inherit;
+            border-radius: 40%;
+        }
+
+        .number {
+            height: 70px;
+            width: 250px;
+            margin: 20px;
+            margin-left: 10%;
+            margin-top: 5%;
+            border-radius: 20px;
+            font-size: x-large;
+            text-align: center;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #3498db;
+
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            display: flex;
+            justify-content: center;
+            margin-left: 40%;
+            margin-top: 10%;
+
+
+
+
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display" id="display">
+            <h1 class="display-text" id="display-box"></h1>
+            <div class="loader" id="loader"></div>
+        </div>
+
+        <input type="number" id="number" class="number" placeholder="bet number">
+        <input type="number" id="coins" class="number" placeholder="Coin">
+        <button class="button" id="start" onclick="start()">CLICK ME</button>
+        <button class="button" id="start" onclick="clear()">CLEAR</button>
+    </div>
+    <script>
+        let coins = 100;
+        function start() {
+            document.getElementById("loader").style.display = "block";
+            setTimeout(() => {
+                startLottery();
+            }, 2000);
+        }
+
+        function lotteryStart() {
+            document.getElementById("loader").style.display = "none";
+
+            let output = parseInt((Math.random() * 100) / 10);
+            let betCoins = document.getElementById("coins").value;
+            let betNumber = document.getElementById("number").value;
+
+            if (betCoins <= 0 || betNumber < 0) {
+                document.getElementById("display-box").innerHTML = "THE COINS IS" + coins;
+                return;
+            }
+            if (betCoins > coins) {
+                document.getElementById("display-box").innerHTML = "INVALID";
+                return;
+            }
+            if (betNumber == output) {
+                coins += betCoins * 9;
+                document.getElementById("display-box").style.backgroundColor = "#5F374B";
+
+            } else {
+                coins -= betCoins;
+            }
+            document.getElementById("display-box").innerHTML =
+                "LOTTERY NUMBER = " + output + "<BR/>coins is" + coins;
+            document.getElementById("display-box").style.color = "#E8751A";
+            document.getElementById("display").style.backgroundColor = "#E5C287";
+
+        }
+        function clear() {
+            document.getElementById("display-box").innerHTML = "";
+        }
+        window.onload = function () {
+            start();
+
+        }
+    </script>
+</body>
+
+</html>

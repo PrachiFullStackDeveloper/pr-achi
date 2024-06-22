@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <style>
+.box{
+    
+    margin-left: 10px;
+    height: 10px;
+    width: 30vw;
+    border-style: groove;
+    background-color: aqua;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+#button-one{
+    background-color: cadetblue;
+}
+#button-two{
+    background-color: aqua;
+}
+#button-three{
+    background-color:lightcoral;
+}
+.menu{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: lightgreen;
+   
+}
+a {
+    padding: 20px;
+    font-size: x-large;
+}
+html {
+    scroll-behavior: smooth;
+}
+.display{
+    height: 80px;
+    width: 90vw;
+    border-style: solid;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+.input{
+    height: 10%;
+    width: 50%;
+    margin-top: 2px;
+    background-color:palegoldenrod;
+    margin-left:1%;
+    margin-top: 1%;
+    
+}
+
+    </style>
+    <script>
+    
+        function process(x, y){
+            // process
+             let z = Number(x) + Number (y)
+
+            if (z % 2 == 0) {
+                output = "even";
+            } else{
+                output = "ODD";
+            }
+            return output;
+        }
+        function problemOne(){
+            // input
+            let x = prompt("Enter a Value for x = ");
+            let y = prompt("entera value for y = ");
+            let z = process(x,y);
+            // output
+            alert("the value entered is "+ z );
+            
+        }
+        function problemTwo(){
+            // input
+            let x = 100;
+            let y = 200;
+            let z = process (x,y);
+          
+           
+            // Output
+            console.log("value of z is ", z);
+           
+
+        }
+        function problemThree(){
+            // input
+            let x = document.getElementById("input-box").value;
+            let y = document.getElementById("input-box-two").value;
+            let z = process (x,y);
+            // output
+            document.getElementById("display-box").innerHTML = z
+
+        }
+    </script>
+</head>
+<body>
+    <div class="display" id="display-box"></div>
+    <input id="input-box" class="input" type="text">
+    <input id="input-box-two" class="input" type="text">
+
+    <div class="menu">
+        <!-- <a href="#">section-one</a>
+        <a href="#section-two">section-two</a>
+        <a href="#section-three">section-three</a> -->
+    </div>
+    <div id="button-one" class="box" onclick="problemOne()">
+        <h1>section-one</h1>
+    </div>
+    <div id="button-two" class="box" onclick="problemTwo()">
+        <h1>section-two</h1>
+    </div>
+    <div id="button-three" class="box" onclick="problemThree()">
+        <h1>section-three</h1>
+    </div>
+    
+    
+    
+</body>
+</html>

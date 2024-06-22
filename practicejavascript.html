@@ -76,7 +76,7 @@
             total = total + Number(displayString);
             displayString = "";
             document.getElementById("display").innerHTML = displaystring;
-        
+        }
         function showresult() {
             total = total + Number(displayString);
             displayString = total;
@@ -86,24 +86,24 @@
             displayString = displayString.substring(0, displayString.length - 1);
             document.getElementById("display").innerHTML = displayString;
         }
-        // function sub() {
-        //     let firstNo = Number(document.getElementById("number-one").value);
-        //     let secondNo = Number(document.getElementById("number-two").value);
-        //     total = total + firstNo - secondNo
-        //     document.getElementById("display").innerHTML = " TOTAL = " + total;
-        // }
-        // function multi() {
-        //     let firstNo = Number(document.getElementById("number-one").value);
-        //     let secondNo = Number(document.getElementById("number-two").value);
-        //     total = total + firstNo * secondNo;
-        //     document.getElementById("display").innerHTML = " TOTAL = " + total;
-        // }
-        // function div() {
-        //     let firstNo = Number(document.getElementById("number-one").value);
-        //     let secondNo = Number(document.getElementById("number-two").value);
-        //     total = total + firstNo / secondNo;
-        //     document.getElementById("display").innerHTML = " TOTAL = " + total;
-        // }
+        function sub() {
+            let firstNo = Number(document.getElementById("number-one").value);
+            let secondNo = Number(document.getElementById("number-two").value);
+            total = total + firstNo - secondNo
+            document.getElementById("display").innerHTML = " TOTAL = " + total;
+        }
+        function multi() {
+            let firstNo = Number(document.getElementById("number-one").value);
+            let secondNo = Number(document.getElementById("number-two").value);
+            total = total + firstNo * secondNo;
+            document.getElementById("display").innerHTML = " TOTAL = " + total;
+        }
+        function div() {
+            let firstNo = Number(document.getElementById("number-one").value);
+            let secondNo = Number(document.getElementById("number-two").value);
+            total = total + firstNo / secondNo;
+            document.getElementById("display").innerHTML = " TOTAL = " + total;
+        }
 
         function clearFunction() {
             total = 0;

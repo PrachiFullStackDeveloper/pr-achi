@@ -1,49 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Number Finder</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
         .main-container {
-            height: 45vw;
-            width: 60vw;
+            width: 100vw;
+            max-width: 600px;
             background-color: darkslategrey;
-            margin-left: 15%;
-            margin-top: 2%;
-
-
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .display-box {
-            height: 30vh;
-            width: 60vw;
+            height: 80px;
             background-color: #627254;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 50px;
+            font-size: 35px;
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
         }
 
         .input-box {
-            height: 5%;
-            width: 40%;
-            margin-top: 5%;
-            margin-left: 25%;
+            height: 40px;
+            width: calc(100% - 40px);
             background-color: dimgray;
             color: white;
-            font-size:xx-large;
+            font-size: 18px;
             text-align: center;
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 35px;
+        }
 
+        .button-container {
+            display: flex;
+            justify-content: space-between;
         }
 
         .button {
-            height: 10%;
-            width: 50%;
+            height: 50px;
+            width: calc(50% - 10px);
             background-color: #627254;
-            font-size: 35px;
+            font-size: 24px;
             color: white;
-            margin-left: 20%;
-            margin-top: 5%;
-
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
     <script>
@@ -55,17 +76,20 @@
 
             if (x > y && x > z) {
                 output = x;
-                document.getElementById("display").innerHTML = "Largest Number" + output;
-
             } else if (y > z && y > x) {
                 output = y;
-                document.getElementById("display").innerHTML = "Largest Number" + output;
             } else {
                 output = z;
-                document.getElementById("display").innerHTML = "Largest Number" + output;
-
             }
 
+            document.getElementById("display").innerHTML = "Largest Number: " + output;
+        }
+
+        function ClearButton() {
+            document.getElementById("inputone").value = "";
+            document.getElementById("inputtwo").value = "";
+            document.getElementById("inputthree").value = "";
+            document.getElementById("display").innerHTML = "";
         }
     </script>
 </head>
@@ -73,11 +97,13 @@
 <body>
     <div class="main-container">
         <div class="display-box" id="display"></div>
-        <input type="number" id="inputone" class="input-box" placeholder="ENTER a Number">
-        <input type="number" id="inputtwo" class="input-box" placeholder="ENTER a Number">
-        <input type="number" id="inputthree" class="input-box" placeholder="ENTER a Number">
-        <button class="button" id="enter" onclick="EnterButton()">ENTER</button>
-
+        <input type="number" id="inputone" class="input-box" placeholder="Enter a Number">
+        <input type="number" id="inputtwo" class="input-box" placeholder="Enter a Number">
+        <input type="number" id="inputthree" class="input-box" placeholder="Enter a Number">
+        <div class="button-container">
+            <button class="button" onclick="EnterButton()">ENTER</button>
+            <button class="button" onclick="ClearButton()">CLEAR</button>
+        </div>
     </div>
 </body>
 

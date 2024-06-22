@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Electric bill</title>
+    <style>
+        /* main */
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://missionmpsc.com/wp-content/uploads/2023/01/mahavitaran.jpg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* display-box */
+        #display_box {
+            height: 15%;
+            width: 50%;
+            background-color: #496989;
+            border-radius: 20px;
+            margin-top: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        /* input */
+        #input-box {
+            height: 30px;
+            width: 200px;
+            margin-top: 5px;
+
+        }
+
+        /* enter-unit-input */
+        .label {
+            font-size: 30px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        /* button */
+        .button {
+            height: 40px;
+            width: 150px;
+            background-color: grey;
+            font-size: 20px;
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <!-- display-box -->
+        <div class="display" id="display_box">Bill Amount</div>
+        <!-- enter-unit -->
+        <label for="Enter-unit" class="label">ENTER UNIT</label>
+        <!-- input-box   enter-units -->
+        <input type="number" id="input-box-one">
+        <!-- late fees -->
+        <label for="LateFee" class="label">Late Fees</label>
+        <!-- input-box  enter-late-=fees -->
+        <input type="number" id="input-box">
+        <!-- button -->
+        <button class="button" onclick="CalculateBill()">Calculate Bill</button>
+    </div>
+    <script>
+        units = 1000
+        bill = 0
+        function CalculateBill() {
+            if (units <= 50) {
+                bill = units * 1
+            }
+            else if (units <= 150) {
+                bill = 50 * 1 + (units - 50) * 2
+            }
+            else if (units <= 250) {
+                bill = 50 * 1 + 100 * 2 + (units - 150) * 3
+            }
+            else if (units > 250) {
+                bill = 50 * 1 + 100 * 2 + 150 * 3 + (units - 250) * 4
+            }
+
+            if (bill > 150) {
+                bill = bill + bill * 0.2
+            }
+
+            console.log(bill)
+        }
+
+    </script>
+</body>
+
+</html>
