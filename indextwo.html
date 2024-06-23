@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Homepage</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
@@ -17,9 +18,11 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto; 
             padding: 20px;
             box-sizing: border-box;
+            background-color:#1A2130;
+            
         }
 
         .header {
@@ -28,15 +31,21 @@
         }
 
         .navigation {
-            text-align: center;
+            text-align: end;
             margin-bottom: 20px;
+        
         }
 
         .navigation a {
-            margin: 0 10px;
+            margin: 50PX;
+            margin-left: 1200px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            color: #F8F6E3;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .project-grid {
@@ -49,8 +58,9 @@
             text-align: center;
             background-color: #fff;
             border-radius: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(3, 2, 8, 0.648);
             overflow: hidden;
+
         }
 
         .project img {
@@ -74,34 +84,52 @@
             transform: scale(1.05);
         }
         .links{
-          font-size: 20px;
-          display: flex;
-         float:right;
-      
+          font-size: 30px;
+          text-align: center;
+          color: #151515;
+        
+    
         }
+        .project img{
+            height: 60%;
+            width: 100%;
+        }
+
+        i{
+            color: white;
+            font-size: 30px;
+        }
+        .links{
+            text-align: end;
+            
+        }
+        
     </style>
 </head>
 
 <body>
+    
+
+   
     <!-- main -->
 
     <div class="container">
         <!-- heading -->
         <div class="header">
-            <h1>Welcome To My Projects</h1>
+            <h1 style="color:#f4f4f4;">Welcome To My Projects</h1>
         </div>
         <div class="navigation">
-            <a href="file:///Users/enjoy_14_b/Documents/prachihtmlproject/prachihtmlproject/indextwo.html">Home</a>
-            <a href="file:///Users/enjoy_14_b/Documents/prachihtmlproject/prachihtmlproject/form.html">Projects</a>
-            <a href="https://www.w3schools.com/html/html_intro.asp">About</a>
+            
+            
             
         </div>
-        <!-- <div class="links">
+        <div class="links">
             <a href="https://github.com/"><i class='bx bxl-github'></i></a>
             <a href="https://join.skype.com/invite/xj1dbdgB5D1x "><i class='bx bxl-skype' ></i></a>
-            <a href="https://www.linkedin.com/in/prachi-mahajan-0428bb2aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://www.linkedin.com/in/prachi-mahajan-0428bb2aa"><i class='bx bxl-linkedin' ></i></a>
 
-        </div> -->
+        </div>
+        <br>
         <!-- links -->
 
         <!-- <div class="navigation">
@@ -116,22 +144,24 @@
             <!-- Resume_Project -->
             <div class="project">
                 <a href="./resume.html">
-                    <img src="https://www.leaderstat.com/hubfs/Professional%20Resume.png" alt="Resume">
+                <img src="https://www.leaderstat.com/hubfs/Professional%20Resume.png" alt="Resume" width="100%" height="100%">
+                
                     <div class="project-content">
                         <h3>Resume</h3>
                         <p>This is my resume project.</p>
                 </a>
             </div>
         </div>
-        <!-- form_project -->
+        <!-- form_project --> 
         <div class="project">
             <a href="./form.html">
-                <img src="https://static.vecteezy.com/system/resources/previews/013/502/696/non_2x/application-form-close-up-of-business-man-writing-something-in-his-note-pad-with-digitally-composed-application-form-over-it-photo.jpg"
-                    alt="Form Project">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/502/696/non_2x/application-form-close-up-of-business-man-writing-something-in-his-note-pad-with-digitally-composed-application-form-over-it-photo.jpg" width="100%" height="100%"
+                     alt="Form Project">  
                 <div class="project-content">
                     <h3>Form Project</h3>
+                
                     <p>This is my form project.</p>
-            </a>
+                </a>
         </div>
     </div>
     <!-- calculator_project -->
@@ -149,8 +179,8 @@
     <!-- table_project -->
     <div class="project">
         <a href="./table.html">
-            <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_04_HTML-Table-with-Border_480x360.jpg"
-                alt="table project">
+            <img src="https://www.sliderrevolution.com/wp-content/uploads/2021/05/table-header.jpg" alt="table">
+            
             <div class="project-content">
                 <h3>Table Project</h3>
                 <p>This Is My Table Project</p>
@@ -161,7 +191,7 @@
     <!-- days_project -->
     <div class="project">
         <a href="./js_days.html">
-            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230901105005/Weekdays-in-English.png"
+            <img src="https://previews.123rf.com/images/frenta/frenta1107/frenta110700081/9954423-grunge-background-with-names-of-days-of-week.jpg"
                 alt="days project">
             <div class="project-content">
                 <h3>Days Project</h3>
@@ -173,7 +203,7 @@
     <!-- vowel_project -->
     <div class="project">
         <a href="./js-vowel.html">
-            <img src="https://www.eurokidsindia.com/blog/wp-content/uploads/2023/10/instructing-vowels.jpg"
+            <img src="https://t4.ftcdn.net/jpg/00/96/48/33/360_F_96483394_EAai0VIVekIsv97jqo44f5vPnBP4TCFY.jpg"
                 alt="vowel project">
             <div class="project-content">
                 <h3>Vowel Project</h3>
@@ -248,10 +278,11 @@
     </div>
 
     </div>
+    <!-- flex project -->
     <!-- chess_using_flex -->
     <div class="project">
         <a href="./flexchess.html">
-            <img src="https://m.media-amazon.com/images/I/61BQl-qEmeS.jpg" alt="chess flex">
+            <img src="https://wallpapers.com/images/featured/chess-background-na0c3ufv4kcfdcmk.jpg" alt="chess flex">
             <div class="project-content">
                 <h3>Chess Using Flex</h3>
                 <p>This Is My Chess Project</p>
@@ -280,17 +311,27 @@
         </a>
     </div>
     </div>
-    <!-- grid_project -->
+    <div class="project">
+        <a href="./flex.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStwG2Qzuw9sjiK6ejFbAmIB2XhqgGqVpD4zg&s" alt="youtube video">
+       <div class="project-content">
+        <h3>Youtube Video Using Flex</h3>
+        <p>This Is My Video Project</p>
+    </a>
+       </div>
+        
+    </div>
+    <!-- grid project -->
     <div class="project">
         <!-- chess_using_grid -->
-        <a href="./gridchess.html">
+         <a href="./gridchess.html">
             <img src="https://cdn.pixabay.com/photo/2015/12/07/10/40/strategy-1080527_1280.jpg" alt="grid chess">
             <div class="project-content">
                 <h3>Chess Using Grid</h3>
                 <p>This Is My Chess Project </p>
-        </a>
+        </a> 
     </div>
-    </div>
+     </div> 
     <!-- layout_one_using_grid -->
     <div class="project">
         <a href="./gridboxtwo.html">
@@ -334,6 +375,18 @@
 
         </a>
     </div>
+    </div>
+    <!-- iterative project -->
+    <div class="project">
+        <a href="./iterative.html">
+            <img src="https://afteracademy.com/images/what-is-iteration-in-programming-banner-507db448f66fa3d6.png" alt="iterative project">
+       <div class="project-content">
+        <h3>Iterative Project</h3>
+        <p>This Is My Iterative Project</p>
+    </a>
+       </div>
+        
+
     </div>
 
 
