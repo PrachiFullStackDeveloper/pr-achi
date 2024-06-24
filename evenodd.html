@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Odd Even & Vote Eligibility</title>
     <style>
-        /* General styling */
+        /* body */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -18,6 +18,7 @@
             height: 100vh;
         }
 
+        /* main */
         .main-container {
             background-color: #95D2B3;
             width: 80%;
@@ -41,7 +42,7 @@
             border-radius: 5px;
         }
 
-        /* Input fields */
+        /* Input  */
         input[type="number"] {
             height: 40px;
             width: calc(40% - 10px);
@@ -71,6 +72,7 @@
         }
     </style>
     <script>
+        // even oe odd
         function ShowEvenOddNo() {
             let number = document.getElementById("evenodd").value;
             if (number % 2 === 0) {
@@ -79,7 +81,7 @@
                 document.getElementById("display").innerHTML = "Number is Odd";
             }
         }
-
+        // check vote
         function CheckVote() {
             let age = document.getElementById("Age").value;
             if (age >= 18) {
@@ -88,7 +90,7 @@
                 document.getElementById("display").innerHTML = "Not Eligible For Vote";
             }
         }
-
+        // check equal
         function CheckEqual() {
             let number1 = document.getElementById("evenodd").value;
             let number2 = document.getElementById("Age").value;
@@ -98,7 +100,7 @@
                 document.getElementById("display").innerHTML = "Numbers Are Not Equal";
             }
         }
-
+        // clear function
         function clearfunction() {
             document.getElementById("evenodd").value = "";
             document.getElementById("Age").value = "";

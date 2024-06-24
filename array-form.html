@@ -1,105 +1,189 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <style>
-        /* main */
-        .main-container {
-            height: 90vh;
-            width: 70vw;
-            background-color: #436850;
-            margin-left: 90px;
-            margin-top: 20px;
-            border: 2px solid black;
-        }
 
-        /* button */
-        .button {
-            height: 50px;
-            width: 300px;
-            background-color: #222831;
-            font-size: 35px;
-            margin-left: 5%;
-            margin-top: 1%;
-            border-radius: 20px;
-            font-family: serif;
-            color: white;
-        }
+<title>Form list</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-        table,
-        th,
-        td,
-        tr {
-            border-style: solid;
-            border-color: black;
-            margin-left: 20%;
-            margin-top: 2%;
-            width: 500px;
-           height: 10px;
-            
-        }
-    </style>
+    .container {
+        width: 90%;
+        max-width: 800px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+    form {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #729762;
+    }
+
+    form label {
+        font-weight: bold;
+    }
+
+    form input[type=text],
+    form input[type=email],
+    form input[type=date],
+    form input[type=tel] {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    form input[type=submit] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+     
+        transition: background-color 0.3s;
+    }
+
+    form input[type=submit]:hover {
+        background-color: white;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    td {
+        background-color: #ffffff;
+    }
+</style>
 </head>
-
 <body>
-    <!-- form -->
-    <!-- main-container -->
-    <div class="main-container">
-        <!-- entry-button -->
-        <button class="button" id="entry-button">ENTRY</button>
-        <!-- list-button -->
-        <button class="button" id="list-button">LIST</button>
-        <fieldset style="margin-top: 3%;">
-            <!-- form-heading -->
-            <legend>
-                <h1>Enjoy Programming : Enter Your Details</h1> <br>
-            </legend>
-            <!-- first-name -->
-            <label for="first-name">First Name :</label>
-            <input style="height: 20px; width: 200px;" type="text" id="first-name" placeholder="ENTER FIRST NAME">
-            <br><br><br>
-            <!-- middle-number -->
-            <label for="middle-name">Middle-Name :</label>
-            <input style="height: 20px; width: 200px;" type="text" id="Middle-Name" placeholder="ENTER Middle NAME">
-            <br><br>
-            <!-- last-name -->
-            <label for="Last-Name">Last Name :</label>
-            <input style="height: 20px; width: 200px;" type="text" id="Last-name" placeholder="ENTER Last NAME">
-            <br><br><br>
-            <!-- batch-timing -->
-            <label for="pbatch">Preferred batch date:</label>
-            <input type="date" id="pdate">to<input type="date">
-            <br><br>
-            <!-- date-of-birth -->
-            <label for="Date-Of-Birth">Date Of Birth :</label>
-            <input type="Date" id="dbirth"> <br><br>
-            <!-- contact-no -->
-            <label for="Contact">Contact No :</label>
-            <input type="Number" id="Contact No" placeholder="91..........">
-            <br><br>
-            <!-- email -->
-            <label for="Email">Email</label>
-            <input type="email" id="Email">
-            <br><br>
-            <!-- submit-button -->
-            <input type="submit" id="next"
-                style="color:#FEFDED; background-color: #222831; height: 45px; width: 175px; font-size: 35px; padding-right:40px; font-family:serif;">
-        </fieldset>
-
-    </div>
-    
-    <!-- list -->
-    <div class="main">
-        <table>
-         
+    <div class="container">
+        <div class="form-header">
+          
+            <button class="button" id="entry-button">Entry</button>
            
-               
+        </div>
+        <!-- form data -->
+        
+        <form id="myForm">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="Enter First Name" required><br><br>
             
-        </table>
+            <label for="middle-name">Middle Name:</label>
+            <input type="text" id="middle-name" placeholder="Enter Middle Name"><br><br>
+            
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Enter Last Name" required><br><br>
+            
+            <label for="date-of-birth">Date Of Birth:</label>
+            <input type="date" id="date-of-birth" required><br><br>
+            
+            <label for="contact-no">Contact No:</label>
+            <input type="tel" id="contact-no" placeholder="Enter Contact No" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Email" required><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <!-- list -->
+        
+        <div id="list-container" style="display: none;">
+            <h2>Submitted Entries</h2>
+            <table id="entry-list">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Date of Birth</th>
+                        <th>Contact No</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="entry-list-body">
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
-    <script>
 
+    <script>
+        document.getElementById('entry-button').addEventListener('click', function () {
+            document.getElementById('list-container').style.display = 'block';
+        });
+
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var firstName = document.getElementById('first-name').value.trim();
+            var middleName = document.getElementById('middle-name').value.trim();
+            var lastName = document.getElementById('last-name').value.trim();
+            var dateOfBirth = document.getElementById('date-of-birth').value.trim();
+            var contactNo = document.getElementById('contact-no').value.trim();
+            var email = document.getElementById('email').value.trim();
+
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${firstName}</td>
+                <td>${middleName}</td>
+                <td>${lastName}</td>
+                <td>${dateOfBirth}</td>
+                <td>${contactNo}</td>
+                <td>${email}</td>
+            `;
+
+            document.getElementById('entry-list-body').appendChild(newRow);
+            document.getElementById('myForm').reset();
+        });
     </script>
 </body>
-
 </html>
